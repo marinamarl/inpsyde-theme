@@ -12,10 +12,5 @@
   "require": {
      "php": ">=5.4",
      "composer/installers": "~1.0"
-   },
-   "extra": {
-     "installer-paths": {
-       "wp/wp-content/themes/": ["type:vcs"]
-     }
    }
 }
