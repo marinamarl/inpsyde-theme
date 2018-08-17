@@ -14,7 +14,7 @@
    },
    "extra": {
      "installer-paths": {
-       "wp/wp-content/themes/": ["type:wordpress-theme"]
+       "wp/wp-content/themes/": ["type:vcs"]
      }
    }
 }
