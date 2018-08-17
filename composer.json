@@ -12,5 +12,15 @@
   "require": {
      "php": ">=5.4",
      "composer/installers": "~1.0"
-   }
+   },
+     "extra": {
+    "installer-paths": {
+      "wp-content/plugins/{$name}/": [
+        "type:wordpress-plugin"
+      ],
+      "wp-content/themes/{$name}/": [
+        "type:wordpress-theme"
+      ]
+    }
+},
 }
