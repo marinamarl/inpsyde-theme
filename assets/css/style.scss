@@ -96,6 +96,7 @@ body{
         margin:35px;
         color: white;
         a{color: white;}
+        &:nth-child(2),&:nth-child(3){margin:35px 12px;}
       }
     }
 }
