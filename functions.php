@@ -106,12 +106,12 @@ add_action( 'after_setup_theme', 'inpsyde_task_content_width', 0 );
 function inpsyde_task_widgets_init() {
 	register_sidebar( array(
 		'name'          => esc_html__( 'Sidebar', 'inpsyde-task' ),
-		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'inpsyde-task' ),
+		'id'            => 'tag-widget',
+		'description'   => esc_html__( "Add a text widget with the site's tag line here.", 'inpsyde-task' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
+		'before_title'  => '<h1 class="widget-title">',
+		'after_title'   => '</h1>',
 	) );
 
 }
@@ -126,10 +126,7 @@ function inpsyde_task_scripts() {
 	wp_enqueue_style( 'inpsyde-task-style', get_stylesheet_uri().'/styles/style.css', array());
 
 	wp_enqueue_style('font-awesome', '//use.fontawesome.com/releases/v5.2.0/css/all.css');
-	// enqeueing Teko
-	wp_enqueue_style('wpb-google-fonts', '//fonts.googleapis.com/css?family=Teko');
-	// enqeueing Sanchez
-	wp_enqueue_style('wpb-google-fonts', '//fonts.googleapis.com/css?family=Sanchez');
+	wp_enqueue_style('wpb-google-fonts', '//fonts.googleapis.com/css?family=Sanchez|Teko',array());
 
 	// wp_enqueue_script( 'inpsyde-task-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 

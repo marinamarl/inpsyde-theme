@@ -10,18 +10,18 @@ body h6,body p{font-size:19px}
 body a{color:black;text-decoration:none}
 body a:hover{text-decoration:underline}
 body a:active{text-decoration:underline}
-body .site-branding{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:space-evenly;-webkit-justify-content:space-evenly;-ms-flex-pack:space-evenly;justify-content:space-evenly}
-body .site-branding a{width:250px;height:199px;margin-right:20px}
+body .site-branding{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center}
+body .site-branding a{width:250px;height:199px;margin-right:6%}
 body .site-branding a img{width:100%;height:auto}
-body .site-branding .title-wrap{text-align:center;margin-top:45px}
-body .site-branding .title-wrap .site-title{margin:0}
+body .site-branding .title-wrap{text-align:center;margin-top:45px;width:715px}
+body .site-branding .title-wrap .widget-title{margin:0}
 body .site-branding .title-wrap p{margin-top:0}
 body .site-content{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-justify-content:space-around;-ms-flex-pack:distribute;justify-content:space-around;margin:93px 385px 0 385px}
 body .site-content .main-navigation{margin-right:55px;text-align:center;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column}
 body .site-content .main-navigation a{width:250px;line-height:50px;font-size:16px;background-color:#0f1e2d;color:white}
 body .site-content .main-navigation a:not(:last-child){margin-bottom:23px}
 body .site-content .content-list .blog-wrap{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}
-body .site-content .content-list .blog-wrap .binfo-wrap{width:515px;font-size:16px}
+body .site-content .content-list .blog-wrap .binfo-wrap{width:515px}
 body .site-content .content-list .blog-wrap img{height:100%;border-radius:50%;margin-left:35px;border:solid #707070 1px}
 body .site-content .content-list hr{margin-bottom:65px}
 body .site-info{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;background-color:#0F1E2DE6}

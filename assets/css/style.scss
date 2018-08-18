@@ -24,11 +24,11 @@ body{
 
   .site-branding{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     a{
       width: 250px;
       height: 199px;
-      margin-right: 20px;
+      margin-right: 6%;
       img{
         width: 100%;
         height: auto;
@@ -37,7 +37,8 @@ body{
     .title-wrap{
       text-align: center;
       margin-top:45px;
-      .site-title{margin: 0;}
+      width: 715px;
+      .widget-title{margin: 0;}
       p{margin-top: 0;}
     }
   }
@@ -67,7 +68,6 @@ body{
         display: flex;
         .binfo-wrap{
           width: 515px;
-          font-size: 16px;
         }
         img{
           height: 100%;
