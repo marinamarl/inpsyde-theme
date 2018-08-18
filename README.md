@@ -1,9 +1,11 @@
 Install:
 
-For local development (vendor will be installed on separate folder from wordpress, wp core will be in wp subfolder, theme will still be in themes/wp-content.)
-
-create a composer.json in directory of choice:
+For local development
 ---------------------
+(vendor will be installed on separate folder from wordpress, wp core will be in wp subfolder, theme will still be in themes/wp-content.)
+
+Create a composer.json in directory of choice:
+
 {
   "name": "Inpsyde",
   "homepage": "https://marina_marlag@bitbucket.org/marina_marlag/inpsyde-theme.git",
@@ -32,10 +34,12 @@ create a composer.json in directory of choice:
   }
 }
 
-run composer install in cmd.
----------------
+Run composer install in cmd.
 
-For ready for deploy (wordpress files will be in root, composer's vendor file will be in wp-content, theme will be installed in wp-content/themes)
+
+For ready for deploy
+---------------
+(wordpress files will be in root, composer's vendor file will be in wp-content, theme will be installed in wp-content/themes)
 
 create composer.json in root:
 
