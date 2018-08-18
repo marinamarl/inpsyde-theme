@@ -16,8 +16,6 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
-	<link href="<?php echo get_bloginfo( 'template_directory' );?>/styles/style.css" rel="stylesheet">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 	<?php wp_head(); ?>
 </head>
 
@@ -28,6 +26,9 @@
 		<div class="site-branding">
 			<?php
 			the_custom_logo();
+			?>
+			<div class= "title-wrap">
+			<?php
 			if ( is_front_page() && is_home() ) :
 				?>
 				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
@@ -42,16 +43,25 @@
 				?>
 				<p class="site-description"><?php echo $inpsyde_task_description; /* WPCS: xss ok. */ ?></p>
 			<?php endif; ?>
-		</div><!-- .site-branding -->
+		</div>
+	</div><!-- .site-branding -->
 
-		<nav id="site-navigation" class="main-navigation">
-			<?php
-			wp_nav_menu( array(
-				'theme_location' => 'menu-1',
-				'menu_id'        => 'primary-menu',
-			) );
-			?>
-		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
+		<nav id="site-navigation" class="main-navigation">
+			<?php
+			$menuParameters = array(
+				'theme_location' => 'menu-1',
+				'menu_id'        => 'primary-menu',
+			  'container'      => false,
+			  'echo'           => false,
+			  'items_wrap'     => '%3$s',
+			  'depth'          => 0,
+				'link_before'     => '<span>',
+        'link_after'      => '</span>',
+);
+
+echo strip_tags(wp_nav_menu( $menuParameters ), '<a><span>' );
+			?>
+		</nav><!-- #site-navigation -->
