@@ -79,4 +79,13 @@ body{
       hr{margin-bottom:65px;}
     }
   }
+  .site-info{
+    display: flex;
+    justify-content: center;
+    background-color: #0F1E2DE6;
+    p{
+      margin: 0 35px;
+      color: white;
+    }
+  }
 }
