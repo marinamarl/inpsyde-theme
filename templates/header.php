@@ -28,7 +28,12 @@
 			the_custom_logo();
 			?>
 			<div class= "title-wrap">
-			<?php
+				<?php if ( is_active_sidebar( 'tag-widget' ) ) : ?>
+					<div id="header-widget" class="header-widget" role="complementary">
+						<?php dynamic_sidebar( 'tag-widget' ); ?>
+					</div><!-- .header-widget -->
+				<?php endif; ?>
+			<!-- <?php
 			if ( is_front_page() && is_home() ) :
 				?>
 				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
@@ -42,7 +47,7 @@
 			if ( $inpsyde_task_description || is_customize_preview() ) :
 				?>
 				<p class="site-description"><?php echo $inpsyde_task_description; /* WPCS: xss ok. */ ?></p>
-			<?php endif; ?>
+			<?php endif; ?> -->
 		</div>
 	</div><!-- .site-branding -->
 
