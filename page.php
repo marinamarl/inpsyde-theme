@@ -1,18 +1,11 @@
-<?php
-/**
- * The template for displaying all single posts and attachments
- *
- * @package WordPress
- */
+<?php /* Template Name: Imprint Template */
 
 get_template_part( '/templates/header' );  ?>
 
   <div class="row">
-    <!-- Post Content Column -->
-    <div class="content-single">
-      <header>
-        <h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-      </header>
+    <h1 class="imp-title">Imprint</h1>
+    <!-- Page Content Column -->
+    <div class="content-page">
         <?php
       if ( have_posts() ) :
         // Start the loop.
