@@ -8,8 +8,7 @@ body h4{font-size:25px}
 body h5{font-size:20px}
 body h6,body p{font-size:19px}
 body a{color:black;text-decoration:none}
-body a:hover{text-decoration:underline}
-body a:active{text-decoration:underline}
+body a:hover,body a:active{text-decoration:underline}
 body .site-branding{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center}
 body .site-branding a{width:250px;height:199px;margin-right:50px}
 body .site-branding a img{width:100%;height:auto}
@@ -25,9 +24,10 @@ body .site-content .content-list .blog-wrap .binfo-wrap{width:515px}
 body .site-content .content-list .blog-wrap .binfo-wrap h2{margin-top:0}
 body .site-content .content-list .blog-wrap img{width:300px;height:100%;border-radius:50%;margin-left:35px;border:solid #707070 1px}
 body .site-content .content-list hr{margin-bottom:65px}
+body .site-content .content-single h1{margin-top:0}
 body .site-content .content-single img{width:100%;height:100%}
+body .site-content .imp-title{margin-top:0}
 body .site-footer{height:95px;position:fixed;bottom:0;left:0;right:0}
 body .site-footer .site-info{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;background-color:#0F1E2DE6;height:100%}
-body .site-footer .site-info p{margin:35px;color:white}
-body .site-footer .site-info p a{color:white}
-body .site-footer .site-info p:nth-child(2),body .site-footer .site-info p:nth-child(3){margin:35px 12px}
+body .site-footer .site-info p,body .site-footer .site-info a{margin:35px;color:white}
+body .site-footer .site-info:nth-child(2),body .site-footer .site-info:nth-child(3){margin:35px 12px}
