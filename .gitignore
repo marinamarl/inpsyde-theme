@@ -30,9 +30,9 @@
 #
 # -----------------------------------------------------------------
 
-# ignore everything in the root except the "wp-content" directory.
-/*
-!wp-content/
+# ignore everything in the root except the "wp-content" directory (only activate if root is wordpress core).
+#/*
+#!wp-content/
 
 # ignore all files starting with .
 .*

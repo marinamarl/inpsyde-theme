@@ -1,11 +1,13 @@
 <div class="blog-wrap">
   <div class="binfo-wrap">
     <!-- Title -->
-    <h2 class="mt-4"><?php the_title(); ?></h2>
+    <a href="<?php the_permalink(); ?>" target="_blank"><h2 class="mt-4"><?php the_title(); ?></h2></a>
 
-    <!-- Post Content -->
-     <?php the_excerpt(); ?>
-
+    <!-- Post Excerpt or Content -->
+     <?php
+     if ( is_front_page() && is_home() ) :
+     the_excerpt();
+     ?>
      <!-- Date/Time -->
      <div><p class="blog-info"><?php the_date(); ?> > <a href="#"><?php the_author(); ?></a> >  <?php the_category(', '); ?></p> </div>
   </div>
@@ -15,6 +17,7 @@
    <?php
  } else
  echo'<p>This post has no thumbnail!</p>';
-  ?>
+ endif;
+ ?>
 </div>
  <hr>
