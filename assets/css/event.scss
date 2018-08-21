@@ -1,0 +1,32 @@
+.event-single{
+  table { border-collapse: collapse; }
+  .event-info{
+    display:flex;
+    justify-content: space-between;
+    .info-values{
+      th{
+        text-align: start;
+        padding-right: 20px;
+        vertical-align: top;
+      }
+      th, td{font-size: 19px;}
+      td{
+        padding-bottom: 1em;
+        &.location{
+          padding-bottom: 0;
+
+        }
+      }
+    }
+
+
+    .left-info{
+      width:25%;
+      h3{
+        margin: 0;
+      font-weight: 400;
+      }
+    }
+
+  }
+}

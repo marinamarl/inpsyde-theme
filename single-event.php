@@ -20,8 +20,7 @@ get_template_part( '/templates/header' );  ?>
         the_excerpt();
         ?>
         <div class="event-info">
-          <div class="right-info" style="display:flex;">
-
+          <div class="right-info">
             <table class="info-values">
               <tr>
                 <th>Date of event:</th>
@@ -30,17 +29,17 @@ get_template_part( '/templates/header' );  ?>
               </tr>
               <tr>
                 <th>Time:</th>
-                <td>(The time, shown when the function is provided by the plugin)</td>
+                <td>(function to be recieved)</td>
               </tr>
               <tr>
                 <th rowspan="3">Location:</th>
-                <td><?php echo Inpsyde\Events\Model\Location::name()?>,<?php echo Inpsyde\Events\Model\Location::street()?></td>
+                <td class="location"><?php echo Inpsyde\Events\Model\Location::name()?>,<?php echo Inpsyde\Events\Model\Location::street()?></td>
               </tr>
               <tr>
-                <td><?php echo Inpsyde\Events\Model\Location::postalCode()?>,<?php echo Inpsyde\Events\Model\Location::city()?></td>
+                <td class="location"><?php echo Inpsyde\Events\Model\Location::postalCode()?>,<?php echo Inpsyde\Events\Model\Location::city()?></td>
               </tr>
               <tr>
-                <td<?php echo Inpsyde\Events\Model\Location::country()?></td>
+                <td><?php echo Inpsyde\Events\Model\Location::country()?></td>
               </tr>
               <tr>
                 <th>Subscriber:</th>
@@ -48,7 +47,7 @@ get_template_part( '/templates/header' );  ?>
               </tr>
               <tr>
                 <th>Price:</th>
-                <td>(The price, shown when the function is provided by the plugin)</td>
+                <td>(function to be recieved)</td>
               </tr>
               <tr>
                 <th>Included in price:</th>
@@ -64,6 +63,7 @@ get_template_part( '/templates/header' );  ?>
       </div>
 
       <div class="left-info">
+        <h3>Contact Person:</h3>
         <p><?php echo Inpsyde\Events\Model\ContactPerson::firstName()?>,<?php echo Inpsyde\Events\Model\ContactPerson::lastName()?>
         <?php echo Inpsyde\Events\Model\ContactPerson::position()?>,<?php echo Inpsyde\Events\Model\ContactPerson::telephone()?>
         <?php echo Inpsyde\Events\Model\ContactPerson::email()?></p>

@@ -175,10 +175,3 @@ function events_register_post_type() {
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
-// temporary: exclude the events category posts from showing on home page.
-function exclude_category( $query ) {
-    if ( $query->is_home() && $query->is_main_query() ) {
-        $query->set( 'cat', '-9' );
-    }
-}
-add_action( 'pre_get_posts', 'exclude_category' );
