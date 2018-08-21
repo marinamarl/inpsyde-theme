@@ -46,7 +46,10 @@ var team                    = 'WPTie <your_email@email.com>'; // Team's Email ID
 var styleSRC                = './assets/css/style.scss'; // Path to main .scss file.
 var styleDestination        = './styles'; // Path to place the compiled CSS file.
 // Default set to root folder.
-
+// plugin Style related.
+var PstyleSRC                = './assets/css/event.scss'; // Path to main .scss file.
+var PstyleDestination        = './styles/plugin'; // Path to place the compiled CSS file.
+// Default set to root folder.
 // JS Vendor related.
 var jsVendorSRC             = './assets/js/vendor/*.js'; // Path to JS vendor folder.
 var jsVendorDestination     = './js/'; // Path to place the compiled JS vendors file.
@@ -204,7 +207,40 @@ gulp.task( 'browser-sync', function() {
     .pipe( browserSync.stream() )// Reloads style.min.css if that is enqueued.
     .pipe( notify( { message: 'TASK: "styles" Completed! 💯', onLast: true } ) )
  });
+// same for plugin styles.
+ gulp.task('plug-styles', function () {
+    gulp.src( PstyleSRC )
+    .pipe( sourcemaps.init() )
+    .pipe( sass( {
+      errLogToConsole: true,
+      outputStyle: 'compact',
+      precision: 10
+    } ) )
+    .on('error', console.error.bind(console))
+    .pipe( sourcemaps.write( { includeContent: false } ) )
+    .pipe( sourcemaps.init( { loadMaps: true } ) )
+    .pipe( autoprefixer( AUTOPREFIXER_BROWSERS ) )
 
+    .pipe( sourcemaps.write ( './' ) )
+    .pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
+    .pipe( gulp.dest( PstyleDestination ) )
+
+    .pipe( filter( '**/*.css' ) ) // Filtering stream to only css files
+    .pipe( mmq( { log: true } ) ) // Merge Media Queries only for .min.css version.
+
+    .pipe( browserSync.stream() ) // Reloads style.css if that is enqueued.
+
+    .pipe( rename( { suffix: '.min' } ) )
+    .pipe( minifycss( {
+      maxLineLen: 10
+    }))
+    .pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
+    .pipe( gulp.dest( PstyleDestination ) )
+
+    .pipe( filter( '**/*.css' ) ) // Filtering stream to only css files
+    .pipe( browserSync.stream() )// Reloads style.min.css if that is enqueued.
+    .pipe( notify( { message: 'TASK: "plug-styles" Completed! 💯', onLast: true } ) )
+ });
 
  /**
   * Task: `vendorJS`.
@@ -315,9 +351,10 @@ gulp.task( 'browser-sync', function() {
   *
   * Watches for file changes and runs specific tasks.
   */
- gulp.task( 'default', ['styles', 'vendorsJs', 'customJS', 'images', 'browser-sync'], function () {
+ gulp.task( 'default', ['styles', 'plug-styles', 'vendorsJs', 'customJS', 'images', 'browser-sync'], function () {
   gulp.watch( projectPHPWatchFiles, reload ); // Reload on PHP file changes.
   gulp.watch( styleWatchFiles, [ 'styles' ] ); // Reload on SCSS file changes.
+  gulp.watch( styleWatchFiles, [ 'plug-styles' ] ); // Reload on SCSS file changes.
   gulp.watch( vendorJSWatchFiles, [ 'vendorsJs', reload ] ); // Reload on vendorsJs file changes.
   gulp.watch( customJSWatchFiles, [ 'customJS', reload ] ); // Reload on customJS file changes.
  });

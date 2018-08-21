@@ -6,7 +6,7 @@
  *
  * @package Inpsyde_Task
  */
-
+require_once( __DIR__ . '\includes\event-model.php');
 if ( ! function_exists( 'inpsyde_task_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
@@ -79,6 +79,7 @@ if ( ! function_exists( 'inpsyde_task_setup' ) ) :
 			'flex-width'  => true,
 			'flex-height' => true,
 		) );
+
 	}
 endif;
 add_action( 'after_setup_theme', 'inpsyde_task_setup' );
@@ -138,27 +139,36 @@ function inpsyde_task_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'inpsyde_task_scripts' );
 
-/**
- * Implement the Custom Header feature
- */
 
-// require get_template_directory() . '/inc/custom-header.php';
+add_action( 'init', 'events_register_post_type' );
+function events_register_post_type() {
 
-/**
- * Custom template tags for this theme.
- */
-// require get_template_directory() . '/inc/template-tags.php';
+  $args = array(
+        'label'  => 'Events',
+    'labels' => array(
+        'name'          => 'Events',
+        'singular_name' => 'Events',
+        'add_new_item'  => 'Add New Event',
+        'edit_item'     => 'Edit Event',
+        'new_item'      => 'New Event',
+        'view_item'     => 'View Event',
+        'search_items'  => 'Search Events',
+        'not_found'     => 'No Events',
+    ),
+    'description' => 'A post type used to provide information on Events.',
+		'has_archive' => true,
+    'public'      => true,
+    'show_ui'     => true,
+    'supports'    => array(
+        'title',
+        'editor',
+        'excerpt',
+    ),
+  );
 
-/**
- * Functions which enhance the theme by hooking into WordPress.
- */
-// require get_template_directory() . '/inc/template-functions.php';
+  register_post_type( 'event', $args );
 
-/**
- * Customizer additions.
- */
-// require get_template_directory() . '/inc/customizer.php';
-
+}
 /**
  * Load Jetpack compatibility file.
  */
