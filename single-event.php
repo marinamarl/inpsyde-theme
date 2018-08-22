@@ -1,4 +1,4 @@
-<?php /* Template Name: Single Event.*/
+<?php
 
 // this is only for displaying purposes, not how a plugin would be shipped.
 
@@ -14,18 +14,16 @@ get_template_part( '/templates/header' );  ?>
       if ( have_posts() ) :
 
         while ( have_posts() ) : the_post();
-
-
-
         the_excerpt();
         ?>
+
         <div class="event-info">
           <div class="right-info">
             <table class="info-values">
               <tr>
                 <th>Date of event:</th>
-                <td><?php echo Inpsyde\Events\Model\Event::startDate()->format('Y-m-d'); ?> -
-                <?php echo Inpsyde\Events\Model\Event::endDate()->format('Y-m-d'); ?></td>
+                <td><?php echo Inpsyde\Events\Model\Event::startDate()->format('.m'); ?> -
+                <?php echo Inpsyde\Events\Model\Event::endDate()->format('d.m.Y'); ?></td>
               </tr>
               <tr>
                 <th>Time:</th>
@@ -55,31 +53,25 @@ get_template_part( '/templates/header' );  ?>
               </tr>
               <tr>
                 <th>Registration end:</th>
-                <td><?php echo Inpsyde\Events\Model\Event::registrationEnd()->format('Y-m-d');?></td>
+                <td><?php echo Inpsyde\Events\Model\Event::registrationEnd()->format('d.m.Y');?></td>
               </tr>
             </table>
-
-
       </div>
 
       <div class="left-info">
         <h3>Contact Person:</h3>
-        <p><?php echo Inpsyde\Events\Model\ContactPerson::firstName()?>,<?php echo Inpsyde\Events\Model\ContactPerson::lastName()?>
-        <?php echo Inpsyde\Events\Model\ContactPerson::position()?>,<?php echo Inpsyde\Events\Model\ContactPerson::telephone()?>
+        <p><?php echo Inpsyde\Events\Model\ContactPerson::firstName()?><?php echo Inpsyde\Events\Model\ContactPerson::lastName()?>,
+        <?php echo Inpsyde\Events\Model\ContactPerson::position()?>,<?php echo Inpsyde\Events\Model\ContactPerson::telephone()?>,
         <?php echo Inpsyde\Events\Model\ContactPerson::email()?></p>
       </div>
 
       </div>
 
-        <?php
-              the_content();
-        // End the loop.
-        endwhile; endif;
 
-        ?>
+    <?php  the_content();
+   endwhile; endif; ?>
       </div>
-      <!-- get the sidebar template -->
-      <?php //get_template_part( '/sidebar' ); ?>
-    </div>
+      </div>
+
     <!-- /.row -->
 <?php get_template_part( '/templates/footer' ); ?>

@@ -1,5 +1,5 @@
 <!--
-Theme Name: Theming
+Theme Name: Mountain Conqueror
 Author: Marina Marlagk
 Description: Inpsyde Task
 Version: 0.0.1

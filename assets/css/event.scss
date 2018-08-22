@@ -30,3 +30,16 @@
 
   }
 }
+.event-archive{
+  .events-wrap{
+    display: flex;
+    flex-wrap: wrap;
+    .single-event{
+      width: 45%;
+      border-bottom:2px solid gray;
+      &:nth-child(odd){
+        padding-right: 70px;
+      }
+    }
+  }
+}

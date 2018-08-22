@@ -37,7 +37,7 @@ Create a composer.json in directory of choice:
 Run composer install in cmd.
 
 
-For ready for deploy
+Ready for deploy
 ---------------
 (wordpress files will be in root, composer's vendor file will be in wp-content, theme will be installed in wp-content/themes)
 
@@ -80,4 +80,5 @@ to run developing tasks:
 
 gulp
 
-more info soon.
+For the plugin:
+For the sake of styling, there is a custom post type of which posts 'events' show on the page 'Events'.There is no link to them in the theme, as was not required.
