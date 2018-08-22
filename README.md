@@ -82,3 +82,5 @@ gulp
 
 For the plugin:
 For the sake of styling, there is a custom post type of which posts 'events' show on the page 'Events'.There is no link to them in the theme, as was not required.
+
+caution: I wasn't sure what the Imprint page on the footer would be. To me it seemed that it is meant to be a biography of the author, therefore an administrator with the nickname of the author, and a page named after the author will make the Imprint on the footer lead to the correct page-template.
