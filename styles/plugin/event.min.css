@@ -6,3 +6,6 @@
 .event-single .event-info .info-values td.location{padding-bottom:0}
 .event-single .event-info .left-info{width:25%}
 .event-single .event-info .left-info h3{margin:0;font-weight:400}
+.event-archive .events-wrap{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap}
+.event-archive .events-wrap .single-event{width:45%;border-bottom:2px solid gray}
+.event-archive .events-wrap .single-event:nth-child(odd){padding-right:70px}

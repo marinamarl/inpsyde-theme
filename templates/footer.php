@@ -18,7 +18,7 @@
 			<p>©<?php echo date('Y'); ?> by <?php the_author(); ?></p>
 			<p>Follow my adventures</p>
 			<p><i class="fab fa-instagram"></i> <i class="fab fa-twitter"></i> <i class="fab fa-vimeo-v"></i> <i class="fab fa-youtube"></i></p>
-			<a href="/inpsyde-job-skeleton/<?php get_page_by_title(the_author()) ?>" target="_blank">Imprint</a>
+			<a href="<?php get_page_by_title(the_author()) ?>" target="_blank">Imprint</a>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
