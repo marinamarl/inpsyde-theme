@@ -32,5 +32,7 @@ body .site-footer{height:95px;position:fixed;bottom:0;left:0;right:0}
 body .site-footer .site-info{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;background-color:#0F1E2DE6;height:100%}
 body .site-footer .site-info p,body .site-footer .site-info a{margin:35px;color:white}
 body .site-footer .site-info:nth-child(2),body .site-footer .site-info:nth-child(3){margin:35px 12px}
-@media only screen and (max-width:770px){body .title-wrap{display:none}
+@media only screen and (max-width:770px){body .site-content .main-navigation{display:none}
+body .site-content{margin:93px 0}
+body .title-wrap,body .blog-wrap img{display:none}
 }

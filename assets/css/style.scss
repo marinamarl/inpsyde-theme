@@ -61,7 +61,7 @@ body{
           margin-bottom:23px;
         }
       }
-
+    @media only screen and (max-width: 770px){display: none;}
     }
     .content-list{
       .blog-wrap{
@@ -88,6 +88,7 @@ body{
     }
   }
     .imp-title{margin-top:0;}
+  @media only screen and (max-width: 770px){margin: 93px 0;}
   }
   .site-footer{
     height: 95px;
@@ -110,7 +111,9 @@ body{
     }
 
 @media only screen and (max-width: 770px){
-  .title-wrap{display:none;}
+.title-wrap, .blog-wrap img{display:none;}
+
+
 
 }
 
