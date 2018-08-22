@@ -20,6 +20,7 @@ body{
     &:hover,&:active{text-decoration: underline;}
 
   }
+  .readmore a{color:#9F3636;}
 
   .site-branding{
     display: flex;
@@ -107,4 +108,11 @@ body{
         &:nth-child(2),&:nth-child(3){margin:35px 12px;}
       }
     }
+
+@media only screen and (max-width: 770px){
+  .title-wrap{display:none;}
+
+}
+
+
 }
