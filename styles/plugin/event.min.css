@@ -9,3 +9,5 @@
 .event-archive .events-wrap{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap}
 .event-archive .events-wrap .single-event{width:45%;border-bottom:2px solid gray}
 .event-archive .events-wrap .single-event:nth-child(odd){padding-right:70px}
+@media only screen and (max-width:770px){.event-archive .events-wrap .single-event{width:100%}
+}

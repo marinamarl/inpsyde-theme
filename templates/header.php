@@ -35,7 +35,7 @@
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
-		<nav id="site-navigation" class="main-navigation">
+		<nav id="site-navigation" class="main-navigation tablet-hidden">
 			<?php
 			$menuParameters = array(
 				'theme_location' => 'menu-1',

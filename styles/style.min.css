@@ -31,8 +31,17 @@ body .site-content .imp-title{margin-top:0}
 body .site-footer{height:95px;position:fixed;bottom:0;left:0;right:0}
 body .site-footer .site-info{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;background-color:#0F1E2DE6;height:100%}
 body .site-footer .site-info p,body .site-footer .site-info a{margin:35px;color:white}
-body .site-footer .site-info:nth-child(2),body .site-footer .site-info:nth-child(3){margin:35px 12px}
+body .site-footer .site-info p.mobile-menu,body .site-footer .site-info a.mobile-menu{display:none}
+body .site-footer .site-info p:nth-child(2),body .site-footer .site-info p:nth-child(3),body .site-footer .site-info a:nth-child(2),body .site-footer .site-info a:nth-child(3){margin:35px 12px}
 @media only screen and (max-width:770px){body .site-content .main-navigation{display:none}
-body .site-content{margin:93px 0}
+body .site-content .content-list .blog-wrap .binfo-wrap{width:100%}
+body .site-content{margin:93px 50px}
+body .site-footer .site-info p,body .site-footer .site-info a{margin:25px;font-size:20px}
+body .site-footer .site-info p.mobile-menu,body .site-footer .site-info a.mobile-menu{display:inline-block;font-size:35px;margin:15px;margin-left:25%}
+body .site-footer .site-info{-webkit-box-pack:start;-webkit-justify-content:start;-ms-flex-pack:start;justify-content:start}
+body .site-footer{height:70px}
 body .title-wrap,body .blog-wrap img{display:none}
+body .tablet-hidden{display:none}
+}@media only screen and (max-width:770px) and (max-width:375px){body .mobile-hidden{display:none}
+}@media only screen and (max-width:376px){body .site-footer .site-info p.mobile-menu,body .site-footer .site-info a.mobile-menu{margin:auto}
 }
