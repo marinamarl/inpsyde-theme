@@ -12,9 +12,6 @@
 ?>
 
 	</div><!-- #content -->
-	<div id="toggle">
-<img src="http://www.example.com/wp-content/themes/your-theme/images/menu.png" alt="Show" /></div>
-<div id="popout">
 	<nav id="mobile-nav" class="mobile-nav">
 		<?php
 		$moMenuParameters = array(
@@ -27,11 +24,9 @@
 			'link_before'     => '<span>',
 			'link_after'      => '</span>',
 	);
-
 	echo strip_tags(wp_nav_menu( $moMenuParameters ), '<a><span>' );
 		?>
 	</nav><!-- #mobile-navigation -->
-</div>
 	<footer id="colophon" class="site-footer">
 		<div class="site-info">
 			<p class= "mobile-hidden">©<?php echo date('Y'); ?> by <?php the_author(); ?></p>

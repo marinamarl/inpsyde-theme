@@ -1,6 +1,6 @@
 jQuery(document).ready(function($) {
-  let menu = "#mobile-menu"
-  let  nav = '#mobile-nav'
+  var menu = "#mobile-menu",
+      nav = '#mobile-nav'
  $(menu).on("click", function() {
    if($(nav).hasClass('active')){
      $(nav).animate({ bottom: -250 }, 'slow', function() {
