@@ -17,7 +17,8 @@ if ( ! function_exists( 'inpsyde_task_setup' ) ) :
 		add_theme_support( 'post-thumbnails' );
 
 		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Primary', 'inpsyde-task' ),
+			'menu-1' 			=> esc_html__( 'Primary', 'inpsyde-task' ),
+			'mobile-nav' 	=> esc_html__( 'Mobile', 'inpsyde-task' ),
 		) );
 
 		add_theme_support( 'html5', array(
@@ -89,15 +90,13 @@ function inpsyde_task_scripts() {
 
 	wp_enqueue_style('font-awesome', '//use.fontawesome.com/releases/v5.2.0/css/all.css');
 	wp_enqueue_style('wpb-google-fonts', '//fonts.googleapis.com/css?family=Sanchez|Teko',array());
-
-	wp_enqueue_script('', get_template_directory_uri() .'/assets/script.js', array('jquery'), 1.0, true);
-
+	wp_enqueue_script( 'wpb_slidepanel', get_template_directory_uri() . '/assets/mobile-nav.js', array('jquery'), '20160909', true );
+// wp_enqueue_script( 'script', get_template_directory_uri() . '/js/script.js', array('jquery'), '1.0', 'all' );
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'inpsyde_task_scripts' );
-
 
 add_action( 'init', 'events_register_post_type' );
 function events_register_post_type() {

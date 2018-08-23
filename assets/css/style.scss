@@ -93,6 +93,34 @@ body{
     .imp-title{margin-top:0;}
   @media only screen and (max-width: 770px){margin: 93px 50px;}
   }
+  .mobile-nav{
+    display: none;
+    // @media only screen and (max-width:375px){
+    &.active{
+      display: inherit;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      a{
+        width: 100%;
+        line-height: 50px;
+        font-size: 25px;
+        background-color: #0F1E2DE6;
+        color: white;
+        text-align: center;
+        padding: 16px 0 16px 0;
+        margin: 5px 0;
+        &:last-child{margin-bottom: 40px;}
+      }
+
+
+    }
+  }
   .site-footer{
     height: 95px;
     position: fixed;
@@ -118,6 +146,7 @@ body{
               font-size: 35px;
               margin: 15px;
               margin-left:25%;
+              &:hover{cursor: pointer;}
             }
             @media only screen and (max-width: 376px){
             margin: auto;}
