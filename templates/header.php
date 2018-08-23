@@ -1,10 +1,5 @@
 <?php
 /**
- * The header for our theme
- *
- * This is the template that displays all of the <head> section and everything up until <div id="content">
- *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
  * @package Inpsyde_Task
  */
@@ -40,7 +35,7 @@
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
-		<nav id="site-navigation" class="main-navigation">
+		<nav id="site-navigation" class="main-navigation tablet-hidden">
 			<?php
 			$menuParameters = array(
 				'theme_location' => 'menu-1',

@@ -40,6 +40,7 @@
       &:nth-child(odd){
         padding-right: 70px;
       }
+      @media only screen and (max-width: 770px){width:100%;}
     }
   }
 }
